@@ -4,6 +4,7 @@
 
 from plugin import *
 import struct, socket
+import ping
 
 class WakeOnLan(Plugin):
 
@@ -31,4 +32,10 @@ class WakeOnLan(Plugin):
         s.sendto(msg, ('<broadcast>', 9))
         s.close()
         self.say("Le pc demarre :) ")
+        self.complete_request()
+
+    @register("fr-FR",u"(Ping pc)")
+    def Ping_Pc(self, speech, language):
+        Retour_Ping = ping.verbose_ping("192.168.0.29",2,1)
+        self.say(Retour_Ping)
         self.complete_request()
