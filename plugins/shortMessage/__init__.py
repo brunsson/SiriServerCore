@@ -37,136 +37,163 @@ import random
 responses = {
 'notFound': 
     {'de-DE': u"Entschuldigung, ich konnte niemanden in deinem Telefonbuch finden der so heißt",
-     'en-US': u"Sorry, I did not find a match in your phone book"
+     'en-US': u"Sorry, I did not find a match in your phone book",
+     'fr-FR': u"Désolé, je n'ai pas trouvé de correspondance dans votre liste de contacts"
     },
 'devel':
     {'de-DE': u"Entschuldigung, aber diese Funktion befindet sich noch in der Entwicklungsphase",
-     'en-US': u"Sorry this feature is still under development"
+     'en-US': u"Sorry this feature is still under development",
+     'fr-FR': u"Désolé, Cette fonctionnalité est en dévellopement"
     },
  'select':
     {'de-DE': u"Wen genau?", 
-     'en-US': u"Which one?"
+     'en-US': u"Which one?",
+     'fr-FR': u"Lequel?"
     },
 'selectNumber':
     {'de-DE': u"Welche Telefonnummer für {0}",
-     'en-US': u"Which phone one for {0}"
+     'en-US': u"Which phone one for {0}",
+     'fr-FR': u"Avec quel numero {0}"
     },
 'mustRepeat': 
     {'de-DE': [u"Entschuldigung ich hab dich leider nicht verstanden."],
-     'en-US': [u"Sorry, I did not understand, please try again", u"Sorry, I don't know what you want"]
+     'en-US': [u"Sorry, I did not understand, please try again", u"Sorry, I don't know what you want"],
+     'fr-FR': [u"Désolé, je n'ai pas compris, repetez", u"Désolé, je ne comprend pas ce que vous voullez"]
      },
 'askForMessage':
     {'de-DE': [u"Was willst du schreiben?", u"Was soll drin stehen?", u"Du kannst mir jetzt diktieren!"],
-     'en-US': [u"What do you want to say?", u"What do you want to include in the message?", u"Please dictate me the contents!"]
+     'en-US': [u"What do you want to say?", u"What do you want to include in the message?", u"Please dictate me the contents!"],
+     'fr-FR': [u"Que souhaitez vous dire?", u"Que voullez vous inclure dans le message?", u"Dictez moi le contenu"]
      },
 'showUpdate': 
     {'de-DE': [u"Ich hab deine Nachricht geschrieben. Willst du sie jetzt senden?", u"OK. Willst du die Nachricht jetzt senden?"],
-     'en-US': [u"I updated your message. Ready to send it?", u"Ok, I got that, do you want to send it?", u"Thanks, do you want to send it now?"]
+     'en-US': [u"I updated your message. Ready to send it?", u"Ok, I got that, do you want to send it?", u"Thanks, do you want to send it now?"],
+     'fr-FR': [u"J'ai mis a jour le message. Pret a l'envoie ?", u"Ok, Pret à l'envoie ?", u"Tout bon, on envoie ?"]
      },
 'cancelSms': 
     {'de-DE': [u"OK, I schick sie nicht.", u"OK, ich hab sie verworfen"],
-     'en-US': [u"OK, I won't send it.", u"OK, I deleted it."]
+     'en-US': [u"OK, I won't send it.", u"OK, I deleted it."],
+     'fr-FR': [u"Ok, J'annule", u"Ok, Je le supprime"]
      },
 'cancelFail':
     {'de-DE': [u"Sorry, aber mir ist ein Fehler beim Abbrechen passiert"],
-     'en-US': [u"Sorry I could not properly cancel your message"]
+     'en-US': [u"Sorry I could not properly cancel your message"],
+     'fr-FR': [u"Désolé, je ne peux pas annuler votre message"]
      },
 'createSmsFail':
     {'de-DE': [u"Ich konnte keine neue Nachricht anlegen, sorry"],
-     'en-US': [u"I could not create a new message, sorry!"]
+     'en-US': [u"I could not create a new message, sorry!"],
+     'fr-FR': [u"Je ne peux pas crée de nouveau message !"]
      },
 'updateSmsFail':
     {'de-DE': [u"Entschuldigung ich konnte die Nachricht nicht schreiben"],
-     'en-US': [u"Sorry, I could not update your message!"]
+     'en-US': [u"Sorry, I could not update your message!"],
+     'fr-FR': [u"Désolé, je ne peux pas mettre a jour votre message"]
      },
 'sendSms':
     {'de-DE': [u"OK, ich verschicke die Nachricht"],
-     'en-US': [u"OK, I'll send your message."]
+     'en-US': [u"OK, I'll send your message."],
+     'fr-FR': [u"Ok, J'envoie le message."]
      },
 'sendSmsFail':
     {'de-DE': [u"Umpf da ist was schief gelaufen, sorry"],
-     'en-US': [u"Hm something gone wrong, I could not send the message, I'm very sorry"]
+     'en-US': [u"Hm something gone wrong, I could not send the message, I'm very sorry"],
+     'fr-FR': [u"Bon... quelque chose ne vas pas, je ne peux pas envoyer le message, vraiment désolé."]
      },
 'clarification':
     {'de-DE': [u"Fortfahren mit senden, abbrechen, anschauen oder ändern."],
-     'en-US': [u"To continue, you can Send, Cancel, Review, or Change it."]
+     'en-US': [u"To continue, you can Send, Cancel, Review, or Change it."],
+     'fr-FR': [u"Pour continuer vous pouvez : Envoyer, Annuler, Revoir, Changer"]
      }
 }
 
 questions = {
 'answerSEND': 
     {'de-DE': ['yes', 'senden'], # you must include yes
-     'en-US': ['yes', 'send']
+     'en-US': ['yes', 'send'],
+     'fr-FR': ['oui', 'envoyer']
      },
 'answerCANCEL':
     {'de-DE': ['cancel', 'abbrechen', 'stop', 'nein'],  # you must include cancel
-     'en-US': ['cancel', 'no', 'abort']
+     'en-US': ['cancel', 'no', 'abort'],
+     'fr-FR': ['annuler', 'non', 'annule']
      },
 'answerUPDATE':
     {'de-DE': ['ändern', 'verändern'],
-     'en-US': ['change', 'update']
+     'en-US': ['change', 'update'],
+     'fr-FR': ['change', 'modifier']
      },
 'answerREVIEW':
     {'de-DE': ['anschauen', 'zeigen', 'zeig'],
-     'en-US': ['review', 'view']
+     'en-US': ['review', 'view'],
+     'fr-FR': ['revoir', 'voir']
      }
 }
 
 snippetButtons = {
 'denyText':
     {'de-DE': "Cancel",
-     'en-US': "Cancel"
+     'en-US': "Cancel",
+     'fr-FR': "Cancel"
      },
 'cancelLabel':
     {'de-DE': "Cancel",
-     'en-US': "Cancel"
+     'en-US': "Cancel",
+     'fr-FR': "Cancel"
      },
 'submitLabel':
     {'de-DE': "Send",
-     'en-US': "Send"
+     'en-US': "Send",
+     'fr-FR': "Send"
      },
 'confirmText':
     {'de-DE': "Send",
-     'en-US': "Send"
+     'en-US': "Send",
+     'fr-FR': "Send"
      },
 'cancelTrigger':
     {'de-DE': "Deny",
-     'en-US': "Deny"
+     'en-US': "Deny",
+     'fr-FR': "Deny"
      }
 }
 
 speakableDemitter={
 'en-US': u", or ",
-'de-DE': u', oder '}
+'de-DE': u', oder ',
+'fr-FR': u', ou '}
 
 
 errorNumberTypes= {
 'de-DE': u"Ich habe dich nicht verstanden, versuch es bitte noch einmal.",
-'en-US': u"Sorry, I did not understand, please try again."
+'en-US': u"Sorry, I did not understand, please try again.",
+'fr-FR': u"Desole, je n'ai pas compris, merci de reesayer."
 }
 
 errorNumberNotPresent= {
 'de-DE': u"Ich habe diese {0} von {1} nicht, aber eine andere.",
-'en-US': u"Sorry, I don't have a {0} number from {1}, but another."
+'en-US': u"Sorry, I don't have a {0} number from {1}, but another.",
+'fr-FR': u"Desole, je n'ai pas le numero {0} de {1}, mais un autre."
 }
 
 
 numberTypesLocalized= {
-'_$!<Mobile>!$_': {'en-US': u"mobile", 'de-DE': u"Handynummer"},
-'iPhone': {'en-US': u"iPhone", 'de-DE': u"iPhone-Nummer"},
-'_$!<Home>!$_': {'en-US': u"home", 'de-DE': u"Privatnummer"},
-'_$!<Work>!$_': {'en-US': u"work", 'de-DE': u"Geschäftsnummer"},
-'_$!<Main>!$_': {'en-US': u"main", 'de-DE': u"Hauptnummer"},
-'_$!<HomeFAX>!$_': {'en-US': u"home fax", 'de-DE': u'private Faxnummer'},
-'_$!<WorkFAX>!$_': {'en-US': u"work fax", 'de-DE': u"geschäftliche Faxnummer"},
-'_$!<OtherFAX>!$_': {'en-US': u"_$!<OtherFAX>!$_", 'de-DE': u"_$!<OtherFAX>!$_"},
-'_$!<Pager>!$_': {'en-US': u"pager", 'de-DE': u"Pagernummer"},
-'_$!<Other>!$_':{'en-US': u"other phone", 'de-DE': u"anderes Telefon"}
+'_$!<Mobile>!$_': {'en-US': u"mobile", 'de-DE': u"Handynummer", 'fr-FR': u"mobile"},
+'iPhone': {'en-US': u"iPhone", 'de-DE': u"iPhone-Nummer", 'fr-FR': u"iPhone"},
+'_$!<Home>!$_': {'en-US': u"home", 'de-DE': u"Privatnummer", 'fr-FR': u"Maison"},
+'_$!<Work>!$_': {'en-US': u"work", 'de-DE': u"Geschäftsnummer", 'fr-FR': u"travail"},
+'_$!<Main>!$_': {'en-US': u"main", 'de-DE': u"Hauptnummer", 'fr-FR': u"principal"},
+'_$!<HomeFAX>!$_': {'en-US': u"home fax", 'de-DE': u'private Faxnummer', 'fr-FR': u"fax maison"},
+'_$!<WorkFAX>!$_': {'en-US': u"work fax", 'de-DE': u"geschäftliche Faxnummer", 'fr-FR': u"fax travail"},
+'_$!<OtherFAX>!$_': {'en-US': u"_$!<OtherFAX>!$_", 'de-DE': u"_$!<OtherFAX>!$_", 'fr-FR': u"_$!<OtherFAX>!$_"},
+'_$!<Pager>!$_': {'en-US': u"pager", 'de-DE': u"Pagernummer", 'fr-FR': u"page"},
+'_$!<Other>!$_':{'en-US': u"other phone", 'de-DE': u"anderes Telefon", 'fr-FR': u"Autre"}
 }
 
 namesToNumberTypes = {
 'de-DE': {'mobile': "_$!<Mobile>!$_", 'handy': "_$!<Mobile>!$_", 'zuhause': "_$!<Home>!$_", 'privat': "_$!<Home>!$_", 'arbeit': "_$!<Work>!$_"},
-'en-US': {'work': "_$!<Work>!$_",'home': "_$!<Home>!$_", 'mobile': "_$!<Mobile>!$_"}
+'en-US': {'work': "_$!<Work>!$_",'home': "_$!<Home>!$_", 'mobile': "_$!<Mobile>!$_"},
+'fr-FR': {'travail': "_$!<Work>!$_",'Maison': "_$!<Home>!$_", 'mobile': "_$!<Mobile>!$_"}
 }
 
 class shortMessaging(Plugin):
@@ -528,8 +555,11 @@ class shortMessaging(Plugin):
     
     @register("en-US", "(Write|Send)( a)?( new)? (message|sms) to (?P<recipient>[\w ]+?)$")
     @register("de-DE", "(Sende|Schreib.)( eine)?( neue)? (Nachricht|sms) an (?P<recipient>[\w ]+?)$")
+    @register("fr-FR", u"(Écrire|Envoyer.)( un)? (message|sms) à (?P<recipient>[\w ]+?)$")
     def sendSMS(self, speech, lang, regex):
+        print "PASSAGE"
         recipient = regex.group('recipient')
+        print recipient
         possibleRecipients = self.searchUserByName(recipient)
         personToMessage = None
         if len(possibleRecipients) > 0:

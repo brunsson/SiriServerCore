@@ -36,6 +36,7 @@ class examplePlugin(Plugin):
     @register("de-DE", ".*standort.*test.*")
     @register("en-US", ".*location.*test.*")
     @register("nl-NL", ".*locatie.*test.*")
+    @register("fr-FR", "Localisation.*test.*")
     def locationTest(self, speech, language):
         location = self.getCurrentLocation(force_reload=True)
         self.say(u"lat: {0}, long: {1}".format(location.latitude, location.longitude))

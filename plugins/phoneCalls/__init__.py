@@ -13,60 +13,70 @@ from siriObjects.uiObjects import AddViews, DisambiguationList, ListItem, \
 responses = {
 'notFound': 
     {'de-DE': u"Entschuldigung, ich konnte niemanden in deinem Telefonbuch finden der so heißt",
-     'en-US': u"Sorry, I did not find a match in your phone book"
+     'en-US': u"Sorry, I did not find a match in your phone book",
+     'fr-FR': u"Desole, je n'ai trouver aucune correspondance dans votre carnet d'adresse"
     },
 'devel':
     {'de-DE': u"Entschuldigung, aber diese Funktion befindet sich noch in der Entwicklungsphase",
-     'en-US': u"Sorry this feature is still under development"
+     'en-US': u"Sorry this feature is still under development",
+     'fr-FR': u"Fonction en cours de devellopement"
     },
  'select':
     {'de-DE': u"Wen genau?", 
-     'en-US': u"Which one?"
+     'en-US': u"Which one?",
+     'fr-FR': u"Lequel?"
     },
 'selectNumber':
     {'de-DE': u"Welche Telefonnummer für {0}",
-     'en-US': u"Which phone one for {0}"
+     'en-US': u"Which phone one for {0}",
+     'fr-FR': u"Avec quel numero {0}"
     },
 'callPersonSpeak':
     {'de-DE': u"Rufe {0}, {1} an.",
-     'en-US': u"Calling {0}, {1}."
+     'en-US': u"Calling {0}, {1}.",
+     'fr-FR': u"Appel en cours {0}, {1}."
     },
 'callPerson': 
     {'de-DE': u"Rufe {0}, {1} an: {2}",
-     'en-US': u"Calling {0}, {1}: {2}"
+     'en-US': u"Calling {0}, {1}: {2}",
+     'fr-FR': u"Appel en cours {0}, {1}: {2}"
     }
 }
 
 numberTypesLocalized= {
-'_$!<Mobile>!$_': {'en-US': u"mobile", 'de-DE': u"Handynummer"},
-'iPhone': {'en-US': u"iPhone", 'de-DE': u"iPhone-Nummer"},
-'_$!<Home>!$_': {'en-US': u"home", 'de-DE': u"Privatnummer"},
-'_$!<Work>!$_': {'en-US': u"work", 'de-DE': u"Geschäftsnummer"},
-'_$!<Main>!$_': {'en-US': u"main", 'de-DE': u"Hauptnummer"},
-'_$!<HomeFAX>!$_': {'en-US': u"home fax", 'de-DE': u'private Faxnummer'},
-'_$!<WorkFAX>!$_': {'en-US': u"work fax", 'de-DE': u"geschäftliche Faxnummer"},
-'_$!<OtherFAX>!$_': {'en-US': u"_$!<OtherFAX>!$_", 'de-DE': u"_$!<OtherFAX>!$_"},
-'_$!<Pager>!$_': {'en-US': u"pager", 'de-DE': u"Pagernummer"},
-'_$!<Other>!$_':{'en-US': u"other phone", 'de-DE': u"anderes Telefon"}
+'_$!<Mobile>!$_': {'en-US': u"mobile", 'de-DE': u"Handynummer", 'fr-FR': u"mobile"},
+'iPhone': {'en-US': u"iPhone", 'de-DE': u"iPhone-Nummer", 'fr-FR': u"iPhone"},
+'_$!<Home>!$_': {'en-US': u"home", 'de-DE': u"Privatnummer", 'fr-FR': u"Maison"},
+'_$!<Work>!$_': {'en-US': u"work", 'de-DE': u"Geschäftsnummer", 'fr-FR': u"travail"},
+'_$!<Main>!$_': {'en-US': u"main", 'de-DE': u"Hauptnummer", 'fr-FR': u"principal"},
+'_$!<HomeFAX>!$_': {'en-US': u"home fax", 'de-DE': u'private Faxnummer', 'fr-FR': u"fax maison"},
+'_$!<WorkFAX>!$_': {'en-US': u"work fax", 'de-DE': u"geschäftliche Faxnummer", 'fr-FR': u"fax travail"},
+'_$!<OtherFAX>!$_': {'en-US': u"_$!<OtherFAX>!$_", 'de-DE': u"_$!<OtherFAX>!$_", 'fr-FR': u"_$!<OtherFAX>!$_"},
+'_$!<Pager>!$_': {'en-US': u"pager", 'de-DE': u"Pagernummer", 'fr-FR': u"page"},
+'_$!<Other>!$_':{'en-US': u"other phone", 'de-DE': u"anderes Telefon", 'fr-FR': u"Autre"}
 }
 
 namesToNumberTypes = {
 'de-DE': {'mobile': "_$!<Mobile>!$_", 'handy': "_$!<Mobile>!$_", 'zuhause': "_$!<Home>!$_", 'privat': "_$!<Home>!$_", 'arbeit': "_$!<Work>!$_"},
-'en-US': {'work': "_$!<Work>!$_",'home': "_$!<Home>!$_", 'mobile': "_$!<Mobile>!$_"}
+'en-US': {'work': "_$!<Work>!$_",'home': "_$!<Home>!$_", 'mobile': "_$!<Mobile>!$_"},
+'fr-FR': {'travail': "_$!<Work>!$_",'Maison': "_$!<Home>!$_", 'mobile': "_$!<Mobile>!$_"}
 }
 
 speakableDemitter={
 'en-US': u", or ",
-'de-DE': u', oder '}
+'de-DE': u', oder ',
+'fr-FR': u', ou '}
 
 errorNumberTypes= {
 'de-DE': u"Ich habe dich nicht verstanden, versuch es bitte noch einmal.",
-'en-US': u"Sorry, I did not understand, please try again."
+'en-US': u"Sorry, I did not understand, please try again.",
+'fr-FR': u"Desole, je n'ai pas compris, merci de reesayer."
 }
 
 errorNumberNotPresent= {
 'de-DE': u"Ich habe diese {0} von {1} nicht, aber eine andere.",
-'en-US': u"Sorry, I don't have a {0} number from {1}, but another."
+'en-US': u"Sorry, I don't have a {0} number from {1}, but another.",
+'fr-FR': u"Desole, je n'ai pas le numero {0} de {1}, mais un autre."
 }
 
 errorOnCallResponse={'en-US':
@@ -94,6 +104,19 @@ errorOnCallResponse={'en-US':
                        'code': 1203},
                       {'dialogIdentifier': u"PhoneCall#fatalResponse",
                        'text': u"Tut mir leid, Ich, ich kann momentan keine Anrufe t�tigen.",
+                       'code': -1}],
+                     'fr-FR':
+                     [{'dialogIdentifier':u"PhoneCall#airplaneMode",
+                       'text': u"Votre telephone est en mode avion.",
+                       'code': 1201},
+                      {'dialogIdentifier': u"PhoneCall#networkUnavailable",
+                       'text': u"Il n'y a pas de reseau....",
+                       'code': 1202},
+                      {'dialogIdentifier': u"PhoneCall#invalidNumber",
+                       'text': u"Desole, je ne peut pas appeler ce numero.",
+                       'code': 1203},
+                      {'dialogIdentifier': u"PhoneCall#fatalResponse",
+                       'text': u"Aie!Aie! je ne peut pas composer ce numero.",
                        'code': -1}]
 }
 
@@ -205,6 +228,7 @@ class phonecallPlugin(Plugin):
     
     @register("de-DE", "ruf. (?P<name>[\w ]+?)( (?P<type>arbeit|zuhause|privat|mobil|handy.*|iPhone.*|pager))? an$")
     @register("en-US", "(make a )?call (to )?(?P<name>[\w ]+?)( (?P<type>work|home|mobile|main|iPhone|pager))?$")
+    @register("fr-FR", "(Appele|Appeler|Appelez) (?P<name>[\w ]+).*(?P<type>travail|Maison|mobile|principal|iPhone|page)?")
     def makeCall(self, speech, language, regex):
         personToCall = regex.group('name')
         numberType = str.lower(regex.group('type')) if type in regex.groupdict() else None
